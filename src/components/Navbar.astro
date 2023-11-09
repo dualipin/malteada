@@ -1,0 +1,29 @@
+---
+import LinkNav from "./LinkNav.astro";
+
+const links = [
+    {
+        name: "Home",
+        href: "/",
+    },
+    {
+        name: "About",
+        href: "/about",
+    },
+    {
+        name: "Contact",
+        href: "/contact",
+    },
+];
+---
+
+<header class="flex dark:bg-slate-950 bg-slate-100 p-2">
+    <nav class="">
+        <ul class="flex gap-3">
+            {links.map(({ name, href }) => <LinkNav name={name} href={href} />)}
+        </ul>
+    </nav>
+    <button>
+        dark
+    </button>
+</header>
